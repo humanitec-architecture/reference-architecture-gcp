@@ -38,11 +38,9 @@ This reference architecture implementation uses Terraform. You will need to do t
 
 3. Ensure you are logged in with `gcloud` (See: [gcloud auth application-default login](https://cloud.google.com/sdk/gcloud/reference/auth/application-default)).
 
-   You will need to ensure your Google Cloud account has appropriate permissions on the project you wish to provision in (see [Required Google Cloud Permissions](#required-google-cloud-permissions)).
+   You will need to ensure your Google Cloud account has appropriate permissions on the project you wish to provision in.
 
-4. Ensure the [Kubernetes Engine API](https://console.cloud.google.com/marketplace/product/google/container.googleapis.com) is enabled for your project.
-
-5. Set the `HUMANITEC_TOKEN` environment variable to an appropriate Humanitec API token with the `Administrator` role on the Humanitec Organization.
+4. Set the `HUMANITEC_TOKEN` environment variable to an appropriate Humanitec API token with the `Administrator` role on the Humanitec Organization.
 
    For example:
 
@@ -50,7 +48,7 @@ This reference architecture implementation uses Terraform. You will need to do t
    export HUMANITEC_TOKEN="my-humanitec-api-token"
    ```
 
-6. Run terraform:
+5. Run terraform:
 
    ```
    terraform init
@@ -100,8 +98,8 @@ gcloud container clusters list --filter "name=htc-ref-arch-cluster"
 ```
 This should output cluster data like this:
 ```bash
-NAME                  LOCATION       MASTER_VERSION  MASTER_IP       MACHINE_TYPE  NODE_VERSION    NUM_NODES  STATUS
-htc-ref-arch-cluster  <your-region>  1.xx.y-gke.100  xx.xxx.xxx.xxx  e2-medium     1.xx.y-gke.100  3          RUNNING
+NAME                  LOCATION       MASTER_VERSION  MASTER_IP       MACHINE_TYPE    NODE_VERSION    NUM_NODES  STATUS
+htc-ref-arch-cluster  <your-region>  xx.xx.xx-gke.xx xx.xx.xx.xx     n2d-standard-4  xx.xx.xx-gke.xx 3          RUNNING
 ```
 
 ## Cleaning up

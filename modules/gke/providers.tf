@@ -9,9 +9,9 @@ terraform {
     helm = {
       source = "hashicorp/helm"
     }
-    http = {
-      source = "hashicorp/http"
-    }
+    # http = {
+    #   source = "hashicorp/http"
+    # }
   }
 }
 
