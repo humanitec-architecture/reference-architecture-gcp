@@ -19,7 +19,7 @@ By default, the following will be provisioned:
 ## Prerequisites
 
 * A Humanitec account with the `Administrator` role in an Organization. Get a [free trial](https://humanitec.com/free-trial?utm_source=github&utm_medium=referral&utm_campaign=gcp_refarch_repo) if you are just starting.
-* An AWS account
+* A GCP organization and a GCP project
 * [gcloud CLI](https://cloud.google.com/cli) installed locally
 * [Terraform](https://www.terraform.io/) installed locally
 
@@ -81,7 +81,7 @@ Check for the existence of key elements of the reference architecture. This is a
 export HUMANITEC_ORG="my-humanitec-org"   
 ```
 
-2. Verify the existence of the Resource Definition for the EKS cluster in your Humanitec Organization:
+2. Verify the existence of the Resource Definition for the GKE cluster in your Humanitec Organization:
 ```bash
 curl -s https://api.humanitec.io/orgs/${HUMANITEC_ORG}/resources/defs/htc-ref-arch-cluster \
   --header "Authorization: Bearer ${HUMANITEC_TOKEN}" \
