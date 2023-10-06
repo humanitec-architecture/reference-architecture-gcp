@@ -1,0 +1,14 @@
+.idea
+.terraform
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.terraformrc
+*.tfvars
+terraform.rc
+*.json
+.DS_Store
+*.bkp
+*.dtmp
+.source

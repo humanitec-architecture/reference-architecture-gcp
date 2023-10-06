@@ -1,0 +1,9 @@
+
+# The GCP project provision the infrastructure in.
+project_id = ""
+
+# The GCP region to provision the infrastructure in.
+region = ""
+
+# The ID of the Humanitec Organization the cluster should be associated with.
+humanitec_org_id = ""
