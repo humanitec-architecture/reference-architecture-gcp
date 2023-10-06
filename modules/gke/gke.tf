@@ -5,8 +5,8 @@ resource "google_container_cluster" "gke" {
   network    = var.vpc_name
   subnetwork = var.subnet
 
-  remove_default_node_pool = var.enable_autopilot != null ? null : true
-  initial_node_count       = var.enable_autopilot != null ? null : 1
+  remove_default_node_pool = var.enable_autopilot ? null : true
+  initial_node_count       = var.enable_autopilot ? null : 1
   datapath_provider        = "ADVANCED_DATAPATH" # Dataplane V2 (NetworkPolicies) is enabled.
 
   enable_autopilot = var.enable_autopilot
@@ -21,7 +21,6 @@ resource "google_container_cluster" "gke" {
 
   cluster_autoscaling {
     enabled = var.enable_autopilot ? null : true
-    # autoscaling_profile = "OPTIMIZE_UTILIZATION" -->  in beta for now
 
     auto_provisioning_defaults {
       service_account = google_service_account.gke_nodes.email
@@ -106,5 +105,28 @@ resource "google_container_cluster" "gke" {
     ignore_changes = [
       node_config # otherwise destroy/recreate with Autopilot...
     ]
+  }
+}
+
+# https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool
+resource "google_container_node_pool" "gke_node_pool" {
+  count       = var.gcp_gke_autopilot ? 0 : 1
+  name        = "primary"
+  cluster     = google_container_cluster.gke.id
+  
+  autoscaling {
+    min_node_count = 0
+    max_node_count = 4
+  }
+
+  node_config {
+    machine_type    = var.node_size
+    service_account = google_service_account.gke_nodes.email
+    oauth_scopes    = ["https://www.googleapis.com/auth/cloud-platform"]
+    
+    shielded_instance_config {
+      enable_secure_boot          = true
+      enable_integrity_monitoring = true
+    }
   }
 }
