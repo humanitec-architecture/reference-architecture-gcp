@@ -110,7 +110,7 @@ resource "google_container_cluster" "gke" {
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool
 resource "google_container_node_pool" "gke_node_pool" {
-  count       = var.gcp_gke_autopilot ? 0 : 1
+  count       = var.enable_autopilot ? 0 : 1
   name        = "primary"
   cluster     = google_container_cluster.gke.id
   
