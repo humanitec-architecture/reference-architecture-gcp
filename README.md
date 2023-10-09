@@ -2,7 +2,7 @@
 
 This repo contains an implementation of part of the Humanitec Reference Architecture for an Internal Developer Platform.
 
-![GCP reference architecture Humanitec](docs/images/GCP-reference-architecture-Humanitec.png)
+![Google Cloud reference architecture Humanitec](docs/images/Reference-Architecture-Google-Cloud-Humanitec.png)
 
 This repo covers the base layer of the implementation for Google Cloud (GCP).
 
