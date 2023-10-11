@@ -2,6 +2,10 @@
 
 This repo contains an implementation of part of the Humanitec Reference Architecture for an Internal Developer Platform.
 
+To install an implementation containing add-ons, follow the separate README. We currently feature these add-ons:
+
+* [Base layer plus Backstage](examples/with-backstage/)
+
 ![Google Cloud reference architecture Humanitec](docs/images/Reference-Architecture-Google-Cloud-Humanitec.png)
 
 This repo covers the base layer of the implementation for Google Cloud (GCP).
@@ -68,7 +72,7 @@ The following variables are required and so need to be set:
 | `region` | `string` | The GCP region to provision the infrastructure in. | `"us-west1"` |
 | `humanitec_org_id` | `string` | The ID of the Humanitec Organization the cluster should be associated with. | `"my-org"` |
 
-There are many other optional inputs that can be set. The full list is described in [Optional input variables](#optional-input-variables).
+There are many other optional inputs that can be set. The full list is described in [Inputs](#inputs).
 
 ## Verify your result
 
@@ -118,14 +122,30 @@ Once you are finished with the reference architecture, you can remove all provis
    terraform destroy
    ```
 
-## Advanced usage
 
-### Optional input variables
+<!-- BEGIN_TF_DOCS -->
+### Requirements
 
-In addition to the 3 required input variables described in [Required input variables](#required-input-variables), this implementation supports many more that change the behavior of the provisioning of infrastructure. 
+| Name | Version |
+|------|---------|
+| terraform | >= 1.3.0 |
+| google | ~> 5.1 |
+| humanitec | ~> 0.13 |
 
-### Tagging & ID generation
+### Modules
 
-| Variable | Type | Description | Default |
-| --- | --- | --- | --- |
-| `humanitec_prefix` | `string` | A prefix that will be attached to all IDs created in Humanitec | `""` |
+| Name | Source | Version |
+|------|--------|---------|
+| base | ./modules/base | n/a |
+
+### Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| humanitec\_org\_id | ID of the Humanitec Organization to associate resources with. | `string` | n/a | yes |
+| project\_id | GCP Project ID to provision resources in. | `string` | n/a | yes |
+| region | GCP Region to provision resources in. | `string` | n/a | yes |
+| environment | The environment to associate the reference architecture with. | `string` | `null` | no |
+| environment\_type | The environment type to associate the reference architecture with. | `string` | `"development"` | no |
+| humanitec\_prefix | A prefix that will be attached to all IDs created in Humanitec. | `string` | `"htc-ref-arch-"` | no |
+<!-- END_TF_DOCS -->

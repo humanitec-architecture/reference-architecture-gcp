@@ -99,3 +99,15 @@ variable "gke_autopilot" {
   type        = bool
   default     = true
 }
+
+variable "gar_repository_id" {
+  type        = string
+  description = "ID of the Google Artifact Registry repository (not created if empty)."
+  default     = null
+}
+
+variable "gar_repository_location" {
+  type        = string
+  description = "Location of the Google Artifact Registry repository (required when gar_repository_id is set)."
+  default     = null
+}
