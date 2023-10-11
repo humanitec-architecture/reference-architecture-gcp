@@ -22,3 +22,7 @@ output "credentials" {
   value     = jsondecode(base64decode(google_service_account_key.gke_cluster_access_key.private_key))
   sensitive = true
 }
+
+output "gar_repository_id" {
+  value = var.gar_repository_id == null ? "" : google_artifact_registry_repository.repo[0].id
+}

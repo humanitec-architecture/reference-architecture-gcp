@@ -39,12 +39,12 @@ resource "google_container_cluster" "gke" {
     }
 
     cidr_blocks {
-        # Open to public internet to make it easier to connect for testing
-        # At least the local IP running terraform needs to be included
-        cidr_block = "0.0.0.0/0"
+      # Open to public internet to make it easier to connect for testing
+      # At least the local IP running terraform needs to be included
+      cidr_block = "0.0.0.0/0"
 
-        # Alternative for tighter access, but less flexibility:
-        # cidr_block = "${chomp(data.http.icanhazip.response_body)}/32"
+      # Alternative for tighter access, but less flexibility:
+      # cidr_block = "${chomp(data.http.icanhazip.response_body)}/32"
     }
     gcp_public_cidrs_access_enabled = false
   }
@@ -110,10 +110,10 @@ resource "google_container_cluster" "gke" {
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool
 resource "google_container_node_pool" "gke_node_pool" {
-  count       = var.enable_autopilot ? 0 : 1
-  name        = "primary"
-  cluster     = google_container_cluster.gke.id
-  
+  count   = var.enable_autopilot ? 0 : 1
+  name    = "primary"
+  cluster = google_container_cluster.gke.id
+
   autoscaling {
     min_node_count = 0
     max_node_count = 4
@@ -123,7 +123,7 @@ resource "google_container_node_pool" "gke_node_pool" {
     machine_type    = var.node_size
     service_account = google_service_account.gke_nodes.email
     oauth_scopes    = ["https://www.googleapis.com/auth/cloud-platform"]
-    
+
     shielded_instance_config {
       enable_secure_boot          = true
       enable_integrity_monitoring = true

@@ -59,3 +59,14 @@ variable "node_size" {
   default     = "n2d-standard-4"
 }
 
+variable "gar_repository_id" {
+  description = "The ID of the Google Artifact Registry repository to use for storing Docker images."
+  type        = string
+  default     = null
+}
+
+variable "gar_repository_location" {
+  description = "Location of the Google Artifact Registry repository."
+  type        = string
+  default     = null
+}
