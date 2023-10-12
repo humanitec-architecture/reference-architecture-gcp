@@ -44,7 +44,7 @@ Check for the existence of key elements of the backstage module. This is a subse
 
 3. Connect to your GKE cluster via `kubectl`. See the [GKE documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl) or use this command:
    ```
-   gcloud container clusters get-credentials ref-arch --location <my-gcp-region>
+   gcloud container clusters get-credentials htc-ref-arch-cluster --location <my-gcp-region>
    ```
 4. Get the elements in the newly created Kubernetes namespace:
    ```
