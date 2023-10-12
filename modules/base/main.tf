@@ -48,7 +48,7 @@ module "k8s" {
 # ######################################################################
 module "res_defs" {
   source           = "../htc_res_defs"
-  k8s_cluster_name = var.gke_cluster_name
+  k8s_cluster_name = module.k8s.cluster_name
   k8s_loadbalancer = module.k8s.loadbalancer
   k8s_region       = var.region
   k8s_project_id   = var.project_id
