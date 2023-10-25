@@ -1,13 +1,13 @@
 # Humanitec Google Cloud Reference Architecture Implementation
 > TL;DR
 >
-> [Follow this tutorial to spin up your Humanitec Google Cloud Reference Architecture Implementation](README.md#how-to-spin-up-your-humanitec-google-cloud-reference-architecture-implementation)
+>Skip the theory? Go [here](README.md#how-to-spin-up-your-humanitec-google-cloud-reference-architecture-implementation) to spin up your Humanitec Google Cloud Reference Architecture Implementation.
 >
-> [Follow this learning path to master you Internal Developer Platform](https://developer.humanitec.com/training/master-your-internal-developer-platform/introduction/)
+> [Follow this learning path to master you Internal Developer Platform](https://developer.humanitec.com/training/master-your-internal-developer-platform/introduction/).
 
 Building an Internal Developer Platform (IDP) can come with many challenges. To give you a head start, we’ve created a set of [reference architectures](https://humanitec.com/reference-architectures) based on hundreds of real-world setups. These architectures described in code provide a starting point to build your own IDP within minutes, along with customization capabilities to ensure your platform meets the unique needs of your users (developers).
 
-The initial version of this reference architecture has been presented by Marco Marulli, Principal Delivery Lead II, McKinsey & Company at [PlartformCon 2023](https://www.youtube.com/watch?v=TswbmEXrvJg).
+The initial version of this reference architecture has been presented by Marco Marulli, Principal Delivery Lead II, McKinsey & Company at [PlatformCon 2023](https://www.youtube.com/watch?v=TswbmEXrvJg).
 
 ## What is an Internal Developer Platform (IDP)?
 
