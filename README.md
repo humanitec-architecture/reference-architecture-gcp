@@ -174,6 +174,7 @@ Once you are finished with the reference architecture, you can remove all provis
    terraform destroy
    ```
 
+## Terraform docs
 
 <!-- BEGIN_TF_DOCS -->
 ### Requirements
