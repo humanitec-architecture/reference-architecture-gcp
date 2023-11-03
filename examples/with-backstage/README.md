@@ -76,6 +76,7 @@ Once you are finished with the reference architecture, you can remove all provis
 | github | ~> 5.38 |
 | google | ~> 5.1 |
 | humanitec | ~> 0.13 |
+| random | ~> 3.5 |
 
 ### Providers
 
@@ -84,6 +85,7 @@ Once you are finished with the reference architecture, you can remove all provis
 | github | ~> 5.38 |
 | google | ~> 5.1 |
 | humanitec | ~> 0.13 |
+| random | ~> 3.5 |
 
 ### Modules
 
@@ -120,6 +122,7 @@ Once you are finished with the reference architecture, you can remove all provis
 | [humanitec_value.backstage_github_org_id](https://registry.terraform.io/providers/humanitec/humanitec/latest/docs/resources/value) | resource |
 | [humanitec_value.backstage_humanitec_org](https://registry.terraform.io/providers/humanitec/humanitec/latest/docs/resources/value) | resource |
 | [humanitec_value.backstage_humanitec_token](https://registry.terraform.io/providers/humanitec/humanitec/latest/docs/resources/value) | resource |
+| [random_string.oidc_suffix](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 
 ### Inputs
 
