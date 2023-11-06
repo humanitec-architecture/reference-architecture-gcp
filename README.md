@@ -1,7 +1,7 @@
 # Humanitec Google Cloud Reference Architecture Implementation
 > TL;DR
 >
->Skip the theory? Go [here](README.md#how-to-spin-up-your-humanitec-google-cloud-reference-architecture-implementation) to spin up your Humanitec Google Cloud Reference Architecture Implementation.
+>Skip the theory? Go [here](#how-to-spin-up-your-humanitec-google-cloud-reference-architecture-implementation) to spin up your Humanitec Google Cloud Reference Architecture Implementation.
 >
 > [Follow this learning path to master you Internal Developer Platform](https://developer.humanitec.com/training/master-your-internal-developer-platform/introduction/).
 
