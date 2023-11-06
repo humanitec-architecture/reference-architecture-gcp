@@ -1,5 +1,7 @@
 output "loadbalancer" {
   value = google_compute_address.public_ingress.address
+
+  depends_on = [helm_release.ingress_nginx]
 }
 
 output "project_id" {
@@ -21,6 +23,10 @@ output "zone" {
 output "credentials" {
   value     = jsondecode(base64decode(google_service_account_key.gke_cluster_access_key.private_key))
   sensitive = true
+}
+
+output "cluster_name" {
+  value = google_container_cluster.gke.name
 }
 
 output "gar_repository_id" {
