@@ -4,6 +4,12 @@ locals {
   cloud_provider       = "gcp"
 }
 
+resource "random_string" "oidc_suffix" {
+  length  = 6
+  special = false
+  upper   = false
+}
+
 # Create a role for GitHub Actions to push to GAR using OpenID Connect (OIDC) so we don't need to store GCP credentials in GitHub
 # Reference https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-google-cloud-platform
 
@@ -12,8 +18,8 @@ module "gh_oidc" {
   source      = "terraform-google-modules/github-actions-runners/google//modules/gh-oidc"
   version     = "~> 3.1"
   project_id  = var.project_id
-  pool_id     = "htc-ref-arch"
-  provider_id = "htc-ref-arch"
+  pool_id     = "htc-ref-arch-${resource.random_string.oidc_suffix.result}"
+  provider_id = "htc-ref-arch-${resource.random_string.oidc_suffix.result}"
   attribute_mapping = {
     "google.subject"             = "assertion.sub"
     "attribute.actor"            = "assertion.actor"
