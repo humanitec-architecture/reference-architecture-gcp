@@ -42,7 +42,7 @@ resource "humanitec_resource_definition_criteria" "k8s_logging" {
 
 
 resource "humanitec_resource_definition" "k8s_namespace" {
-  driver_type = "humanitec/static"
+  driver_type = "humanitec/echo"
   id          = "${var.prefix}namespace"
   name        = "${var.prefix}namespace"
   type        = "k8s-namespace"
