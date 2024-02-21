@@ -25,22 +25,6 @@ resource "humanitec_resource_definition_criteria" "k8s_cluster" {
 }
 
 
-resource "humanitec_resource_definition" "k8s_logging" {
-  driver_type = "humanitec/logging-k8s"
-  id          = "${var.prefix}logging"
-  name        = "${var.prefix}logging"
-  type        = "logging"
-
-  driver_inputs = {}
-}
-
-resource "humanitec_resource_definition_criteria" "k8s_logging" {
-  resource_definition_id = humanitec_resource_definition.k8s_logging.id
-  env_id                 = var.environment
-  env_type               = var.environment_type
-}
-
-
 resource "humanitec_resource_definition" "k8s_namespace" {
   driver_type = "humanitec/echo"
   id          = "${var.prefix}namespace"
