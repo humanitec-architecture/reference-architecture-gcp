@@ -182,7 +182,7 @@ Once you are finished with the reference architecture, you can remove all provis
 |------|---------|
 | terraform | >= 1.3.0 |
 | google | ~> 5.1 |
-| humanitec | ~> 0.13 |
+| humanitec | ~> 1.0 |
 
 ### Modules
 
