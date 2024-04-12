@@ -27,6 +27,7 @@ module "gh_oidc" {
     "attribute.repository"       = "assertion.repository"
     "attribute.repository_owner" = "assertion.repository_owner"
   }
+  attribute_condition = "attribute.repository_owner == \"${var.github_org_id}\""
   sa_mapping = {
     (google_service_account.sa.account_id) = {
       sa_name   = google_service_account.sa.name
