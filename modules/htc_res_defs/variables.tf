@@ -16,7 +16,7 @@ variable "k8s_region" {
   description = "The region the cluster is in."
 }
 variable "k8s_credentials" {
-  type        = map(any)
+  type        = string
   description = "The credentials used to establish a connection to the cluster."
 }
 variable "environment" {
