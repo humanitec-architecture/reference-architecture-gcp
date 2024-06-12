@@ -1,0 +1,24 @@
+
+# The environment to use for matching criteria.
+environment = ""
+
+# The environment type to use for matching criteria.
+environment_type = ""
+
+# The name of the cluster.
+k8s_cluster_name = ""
+
+# The credentials used to establish a connection to the cluster.
+k8s_credentials = ""
+
+# IP address or Host of the load balancer used by the ingress controller.
+k8s_loadbalancer = ""
+
+# The GCP Project the cluster is in.
+k8s_project_id = ""
+
+# The region the cluster is in.
+k8s_region = ""
+
+# A prefix that will be attached to all IDs created in Humanitec.
+prefix = ""

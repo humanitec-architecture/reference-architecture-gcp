@@ -49,3 +49,28 @@ resource "humanitec_resource_definition_criteria" "k8s_namespace" {
   env_id                 = var.environment
   env_type               = var.environment_type
 }
+
+
+# in-cluster postgres
+
+module "default_postgres" {
+  source = "github.com/humanitec-architecture/resource-packs-in-cluster?ref=v2024-06-05//humanitec-resource-defs/postgres/basic"
+
+  prefix = var.prefix
+}
+
+resource "humanitec_resource_definition_criteria" "default_postgres" {
+  resource_definition_id = module.default_postgres.id
+  env_type               = var.environment
+}
+
+module "default_mysql" {
+  source = "github.com/humanitec-architecture/resource-packs-in-cluster?ref=v2024-06-05//humanitec-resource-defs/mysql/basic"
+
+  prefix = var.prefix
+}
+
+resource "humanitec_resource_definition_criteria" "default_mysql" {
+  resource_definition_id = module.default_mysql.id
+  env_type               = var.environment
+}

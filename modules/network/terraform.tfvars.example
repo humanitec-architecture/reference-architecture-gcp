@@ -1,0 +1,15 @@
+
+# GCP Project ID
+project_id = ""
+
+# GCP Region
+region = ""
+
+# List of VPC Subnets
+subnets = ""
+
+# VPC Description
+vpc_description = ""
+
+# VPC Name
+vpc_name = ""

@@ -29,6 +29,15 @@ output "cluster_name" {
   value = google_container_cluster.gke.name
 }
 
+output "cluster_endpoint" {
+  value = google_container_cluster.gke.endpoint
+}
+
+output "cluster_ca_certificate" {
+  description = "Base64 encoded certificate data required to communicate with the cluster"
+  value       = base64decode(google_container_cluster.gke.master_auth.0.cluster_ca_certificate)
+}
+
 output "gar_repository_id" {
   value = var.gar_repository_id == null ? "" : google_artifact_registry_repository.repo[0].id
 }

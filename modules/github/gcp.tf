@@ -1,7 +1,5 @@
 locals {
   service_account_name = "htc-ref-arch-gha-gar-push"
-  name                 = "htc-ref-arch"
-  cloud_provider       = "gcp"
 }
 
 resource "random_string" "oidc_suffix" {
@@ -45,7 +43,7 @@ resource "google_service_account" "sa" {
 resource "google_artifact_registry_repository_iam_member" "gha_gar_containers_writer" {
   project    = var.project_id
   location   = var.gar_repository_location
-  repository = module.base.gar_repository_id
+  repository = var.gar_repository_id
   role       = "roles/artifactregistry.writer"
   member     = "serviceAccount:${google_service_account.sa.email}"
 }

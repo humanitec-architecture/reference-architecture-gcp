@@ -1,16 +1,16 @@
 terraform {
   required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 5.38"
+    }
     google = {
       source  = "hashicorp/google"
       version = "~> 5.1"
     }
-    helm = {
-      source  = "hashicorp/helm"
-      version = "~> 2.12"
-    }
-    humanitec = {
-      source  = "humanitec/humanitec"
-      version = "~> 1.0"
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.5"
     }
   }
   required_version = ">= 1.3.0"
