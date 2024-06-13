@@ -189,7 +189,7 @@ Backstage requires a GitHub connection, which in turn needs:
 
 #### Portal Usage
 
-* Enable `with_backstage` inside your `terraform.tfvars` and configure the additional variables that a required for Backstage.
+* Enable `with_backstage` inside your `terraform.tfvars` and configure the additional variables that are required for Backstage.
 * Perform another `terraform apply`
 
 #### Verify portal setup
