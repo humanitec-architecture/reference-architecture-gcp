@@ -13,12 +13,6 @@ variable "region" {
   description = "GCP Region to provision resources in."
 }
 
-
-variable "humanitec_org_id" {
-  type        = string
-  description = "ID of the Humanitec Organization to associate resources with."
-}
-
 ##########################################
 # OPTIONAL INPUTS
 ##########################################

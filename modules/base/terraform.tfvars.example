@@ -1,0 +1,45 @@
+
+# The environment to associate the reference architecture with.
+environment = ""
+
+# The environment type to associate the reference architecture with.
+environment_type = ""
+
+# ID of the Google Artifact Registry repository (not created if empty).
+gar_repository_id = ""
+
+# Location of the Google Artifact Registry repository (required when gar_repository_id is set).
+gar_repository_location = ""
+
+# Whether GKE Autopilot should be used
+gke_autopilot = true
+
+# The name of the GKE Cluster. Must be unique within the project.
+gke_cluster_name = "htc-ref-arch-cluster"
+
+# The name of the subnet to allocate IPs for the GKE Cluster from. If vpc_subnet is set, this must be updated.
+gke_subnet_name = "htc-ref-arch-subnet"
+
+# A prefix that will be attached to all IDs created in Humanitec.
+humanitec_prefix = ""
+
+# GCP Project ID to provision resources in.
+project_id = ""
+
+# GCP Region to provision resources in.
+region = ""
+
+# VPC Description
+vpc_description = "VPC for Humanitec Reference Architecture Implementation for GCP. https://github.com/humanitec-architecture/reference-archietcture-gcp"
+
+# VPC Name
+vpc_name = "htc-ref-arch-vpc"
+
+# List of VPC Subnets
+vpc_subnets = [
+  {
+    "description": "Subnet that hosts resources provisioned for the Humanitec Reference Architecture Implementation for GCP. https://github.com/humanitec-architecture/reference-archietcture-gcp",
+    "ip_cidr_range": "10.128.0.0/20",
+    "name": "htc-ref-arch-subnet"
+  }
+]

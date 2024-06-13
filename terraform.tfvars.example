@@ -5,7 +5,16 @@ environment = ""
 # The environment type to associate the reference architecture with.
 environment_type = "development"
 
-# ID of the Humanitec Organization to associate resources with.
+# Google Artifact Registry repository ID.
+gar_repository_id = "htc-ref-arch"
+
+# Location of the Google Artifact Registry repository,
+gar_repository_location = ""
+
+# GitHub org id (required for Backstage)
+github_org_id = ""
+
+# Humanitec Organization ID (required for Backstage)
 humanitec_org_id = ""
 
 # A prefix that will be attached to all IDs created in Humanitec.
@@ -16,3 +25,6 @@ project_id = ""
 
 # GCP Region to provision resources in.
 region = ""
+
+# Deploy Backstage
+with_backstage = false
