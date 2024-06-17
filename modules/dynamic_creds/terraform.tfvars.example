@@ -1,0 +1,15 @@
+
+# The ID of the GCP project to which resources will be deployed.
+gcp_project_id = ""
+
+# The ID of the service account used for authenticating and managing GCP resources.
+gcp_service_account_id = "humanitec-cloud-account"
+
+# The ID of the Workload Identity Pool in GCP, which allows you to manage resources within the GCP project.
+gcp_workload_identity_pool_id = "humanitec-wif-pool"
+
+# The ID of the Workload Identity Pool Provider within the specified Workload Identity Pool in GCP, enabling integration with Humanitec.
+gcp_workload_identity_pool_provider_id = "humanitec-wif"
+
+# The identifier of the Humanitec organization used for managing deployments and resources.
+humanitec_org = ""

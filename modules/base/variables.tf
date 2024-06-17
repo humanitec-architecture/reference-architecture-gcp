@@ -7,10 +7,15 @@ variable "project_id" {
   description = "GCP Project ID to provision resources in."
 }
 
-
 variable "region" {
   type        = string
   description = "GCP Region to provision resources in."
+}
+
+variable "humanitec_org_id" {
+  description = "Humanitec Organization ID."
+  type        = string
+  default     = null
 }
 
 ##########################################

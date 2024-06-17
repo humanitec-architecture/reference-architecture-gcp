@@ -11,7 +11,7 @@ github_org_id = ""
 # Humanitec CI Service User Token
 humanitec_ci_service_user_token = ""
 
-# Humanitec Organization ID
+# Humanitec Organization ID.
 humanitec_org_id = ""
 
 # GCP Project ID to provision resources in.

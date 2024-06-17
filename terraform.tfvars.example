@@ -14,7 +14,7 @@ gar_repository_location = ""
 # GitHub org id (required for Backstage)
 github_org_id = ""
 
-# Humanitec Organization ID (required for Backstage)
+# Humanitec Organization ID.
 humanitec_org_id = ""
 
 # A prefix that will be attached to all IDs created in Humanitec.

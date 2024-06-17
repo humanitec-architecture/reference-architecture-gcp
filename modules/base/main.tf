@@ -45,16 +45,27 @@ module "k8s" {
 }
 
 # ######################################################################
+# # DYNAMIC CREDENTIALS
+# ######################################################################
+module "credentials" {
+  source         = "../dynamic_creds"
+  humanitec_org  = var.humanitec_org_id
+  gcp_project_id = var.project_id
+
+}
+
+
+# ######################################################################
 # # HUMANITEC MODULE
 # ######################################################################
 module "res_defs" {
-  source           = "../htc_res_defs"
-  k8s_cluster_name = module.k8s.cluster_name
-  k8s_loadbalancer = module.k8s.loadbalancer
-  k8s_region       = var.region
-  k8s_project_id   = var.project_id
-  k8s_credentials  = module.k8s.credentials
-  environment      = var.environment
-  environment_type = var.environment_type
-  prefix           = var.humanitec_prefix
+  source                  = "../htc_res_defs"
+  k8s_cluster_name        = module.k8s.cluster_name
+  k8s_loadbalancer        = module.k8s.loadbalancer
+  k8s_region              = var.region
+  k8s_project_id          = var.project_id
+  environment             = var.environment
+  environment_type        = var.environment_type
+  prefix                  = var.humanitec_prefix
+  humanitec_cloud_account = module.credentials.humanitec_cloud_account
 }

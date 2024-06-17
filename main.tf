@@ -5,6 +5,7 @@ module "base" {
   project_id       = var.project_id
   region           = var.region
   humanitec_prefix = var.humanitec_prefix
+  humanitec_org_id = var.humanitec_org_id
   environment      = var.environment
   environment_type = var.environment_type
 
