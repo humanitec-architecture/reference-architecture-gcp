@@ -20,6 +20,9 @@ gke_cluster_name = "htc-ref-arch-cluster"
 # The name of the subnet to allocate IPs for the GKE Cluster from. If vpc_subnet is set, this must be updated.
 gke_subnet_name = "htc-ref-arch-subnet"
 
+# Humanitec Organization ID.
+humanitec_org_id = ""
+
 # A prefix that will be attached to all IDs created in Humanitec.
 humanitec_prefix = ""
 

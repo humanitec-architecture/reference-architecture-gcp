@@ -5,11 +5,11 @@ environment = ""
 # The environment type to use for matching criteria.
 environment_type = ""
 
+# The ID of the Humanitec Cloud Account.
+humanitec_cloud_account = ""
+
 # The name of the cluster.
 k8s_cluster_name = ""
-
-# The credentials used to establish a connection to the cluster.
-k8s_credentials = ""
 
 # IP address or Host of the load balancer used by the ingress controller.
 k8s_loadbalancer = ""

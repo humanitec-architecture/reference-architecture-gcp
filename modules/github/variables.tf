@@ -14,7 +14,7 @@ variable "gar_repository_location" {
 }
 
 variable "humanitec_org_id" {
-  description = "Humanitec Organization ID"
+  description = "Humanitec Organization ID."
   type        = string
 
   validation {

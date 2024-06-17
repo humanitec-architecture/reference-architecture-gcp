@@ -264,7 +264,7 @@ Once you are finished with the reference architecture, you can remove all provis
 | environment\_type | The environment type to associate the reference architecture with. | `string` | `"development"` | no |
 | gar\_repository\_id | Google Artifact Registry repository ID. | `string` | `"htc-ref-arch"` | no |
 | github\_org\_id | GitHub org id (required for Backstage) | `string` | `null` | no |
-| humanitec\_org\_id | Humanitec Organization ID (required for Backstage) | `string` | `null` | no |
+| humanitec\_org\_id | Humanitec Organization ID. | `string` | `null` | no |
 | humanitec\_prefix | A prefix that will be attached to all IDs created in Humanitec. | `string` | `"htc-ref-arch-"` | no |
 | with\_backstage | Deploy Backstage | `bool` | `false` | no |
 <!-- END_TF_DOCS -->

@@ -17,6 +17,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
+| credentials | ../dynamic_creds | n/a |
 | k8s | ../gke | n/a |
 | network | ../network | n/a |
 | res\_defs | ../htc_res_defs | n/a |
@@ -40,6 +41,7 @@
 | gke\_autopilot | Whether GKE Autopilot should be used | `bool` | `true` | no |
 | gke\_cluster\_name | The name of the GKE Cluster. Must be unique within the project. | `string` | `"htc-ref-arch-cluster"` | no |
 | gke\_subnet\_name | The name of the subnet to allocate IPs for the GKE Cluster from. If vpc\_subnet is set, this must be updated. | `string` | `"htc-ref-arch-subnet"` | no |
+| humanitec\_org\_id | Humanitec Organization ID. | `string` | `null` | no |
 | humanitec\_prefix | A prefix that will be attached to all IDs created in Humanitec. | `string` | `""` | no |
 | vpc\_description | VPC Description | `string` | `"VPC for Humanitec Reference Architecture Implementation for GCP. https://github.com/humanitec-architecture/reference-archietcture-gcp"` | no |
 | vpc\_name | VPC Name | `string` | `"htc-ref-arch-vpc"` | no |
