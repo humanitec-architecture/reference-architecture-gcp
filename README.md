@@ -260,8 +260,6 @@ Once you are finished with the reference architecture, you can remove all provis
 | gar\_repository\_location | Location of the Google Artifact Registry repository, | `string` | n/a | yes |
 | project\_id | GCP Project ID to provision resources in. | `string` | n/a | yes |
 | region | GCP Region to provision resources in. | `string` | n/a | yes |
-| environment | The environment to associate the reference architecture with. | `string` | `null` | no |
-| environment\_type | The environment type to associate the reference architecture with. | `string` | `"development"` | no |
 | gar\_repository\_id | Google Artifact Registry repository ID. | `string` | `"htc-ref-arch"` | no |
 | github\_org\_id | GitHub org id (required for Backstage) | `string` | `null` | no |
 | humanitec\_org\_id | Humanitec Organization ID. | `string` | `null` | no |

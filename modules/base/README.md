@@ -32,8 +32,6 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| environment | The environment to associate the reference architecture with. | `string` | n/a | yes |
-| environment\_type | The environment type to associate the reference architecture with. | `string` | n/a | yes |
 | project\_id | GCP Project ID to provision resources in. | `string` | n/a | yes |
 | region | GCP Region to provision resources in. | `string` | n/a | yes |
 | gar\_repository\_id | ID of the Google Artifact Registry repository (not created if empty). | `string` | `null` | no |

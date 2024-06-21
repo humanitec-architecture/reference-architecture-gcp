@@ -20,6 +20,7 @@ resource "humanitec_resource_definition_criteria" "k8s_cluster" {
   env_id                 = var.environment
   env_type               = var.environment_type
 
+  force_delete = true
 }
 
 
@@ -40,6 +41,8 @@ resource "humanitec_resource_definition_criteria" "k8s_namespace" {
   resource_definition_id = humanitec_resource_definition.k8s_namespace.id
   env_id                 = var.environment
   env_type               = var.environment_type
+
+  force_delete = true
 }
 
 
@@ -53,7 +56,10 @@ module "default_postgres" {
 
 resource "humanitec_resource_definition_criteria" "default_postgres" {
   resource_definition_id = module.default_postgres.id
-  env_type               = var.environment
+  env_id                 = var.environment
+  env_type               = var.environment_type
+
+  force_delete = true
 }
 
 module "default_mysql" {
@@ -64,5 +70,8 @@ module "default_mysql" {
 
 resource "humanitec_resource_definition_criteria" "default_mysql" {
   resource_definition_id = module.default_mysql.id
-  env_type               = var.environment
+  env_id                 = var.environment
+  env_type               = var.environment_type
+
+  force_delete = true
 }
