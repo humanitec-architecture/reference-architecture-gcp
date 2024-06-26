@@ -1,9 +1,9 @@
 
 # The environment to use for matching criteria.
-environment = ""
+environment = "development"
 
 # The environment type to use for matching criteria.
-environment_type = ""
+environment_type = "development"
 
 # The ID of the Humanitec Cloud Account.
 humanitec_cloud_account = ""

@@ -1,10 +1,4 @@
 
-# The environment to associate the reference architecture with.
-environment = ""
-
-# The environment type to associate the reference architecture with.
-environment_type = ""
-
 # ID of the Google Artifact Registry repository (not created if empty).
 gar_repository_id = ""
 

@@ -22,16 +22,6 @@ variable "humanitec_org_id" {
 # OPTIONAL INPUTS
 ##########################################
 
-variable "environment" {
-  type        = string
-  description = "The environment to associate the reference architecture with."
-}
-
-variable "environment_type" {
-  type        = string
-  description = "The environment type to associate the reference architecture with."
-}
-
 variable "humanitec_prefix" {
   type        = string
   description = "A prefix that will be attached to all IDs created in Humanitec."

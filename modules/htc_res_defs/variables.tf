@@ -18,10 +18,12 @@ variable "k8s_region" {
 variable "environment" {
   type        = string
   description = "The environment to use for matching criteria."
+  default     = "development"
 }
 variable "environment_type" {
   type        = string
   description = "The environment type to use for matching criteria."
+  default     = "development"
 }
 variable "prefix" {
   type        = string

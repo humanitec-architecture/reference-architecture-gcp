@@ -1,10 +1,4 @@
 
-# The environment to associate the reference architecture with.
-environment = ""
-
-# The environment type to associate the reference architecture with.
-environment_type = "development"
-
 # Google Artifact Registry repository ID.
 gar_repository_id = "htc-ref-arch"
 
