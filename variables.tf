@@ -13,9 +13,9 @@ variable "region" {
   description = "GCP Region to provision resources in."
 }
 
-variable "gar_repository_location" {
+variable "gar_repository_region" {
   type        = string
-  description = "Location of the Google Artifact Registry repository,"
+  description = "Region of the Google Artifact Registry repository,"
 }
 
 variable "gar_repository_id" {

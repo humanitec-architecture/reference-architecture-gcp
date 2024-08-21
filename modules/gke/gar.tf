@@ -2,7 +2,7 @@
 resource "google_artifact_registry_repository" "repo" {
   count = var.gar_repository_id == null ? 0 : 1
 
-  location      = var.gar_repository_location
+  location      = var.gar_repository_region
   repository_id = var.gar_repository_id
   description   = "htc-ref-arch docker repository"
   format        = "DOCKER"

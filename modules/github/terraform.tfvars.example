@@ -2,8 +2,8 @@
 # Google Artifact Registry repository ID.
 gar_repository_id = ""
 
-# Location of the Google Artifact Registry repository.
-gar_repository_location = ""
+# Region of the Google Artifact Registry repository.
+gar_repository_region = ""
 
 # GitHub org id
 github_org_id = ""

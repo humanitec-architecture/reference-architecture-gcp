@@ -35,7 +35,7 @@
 | project\_id | GCP Project ID to provision resources in. | `string` | n/a | yes |
 | region | GCP Region to provision resources in. | `string` | n/a | yes |
 | gar\_repository\_id | ID of the Google Artifact Registry repository (not created if empty). | `string` | `null` | no |
-| gar\_repository\_location | Location of the Google Artifact Registry repository (required when gar\_repository\_id is set). | `string` | `null` | no |
+| gar\_repository\_region | Region of the Google Artifact Registry repository (required when gar\_repository\_id is set). | `string` | `null` | no |
 | gke\_autopilot | Whether GKE Autopilot should be used | `bool` | `true` | no |
 | gke\_cluster\_name | The name of the GKE Cluster. Must be unique within the project. | `string` | `"htc-ref-arch-cluster"` | no |
 | gke\_subnet\_name | The name of the subnet to allocate IPs for the GKE Cluster from. If vpc\_subnet is set, this must be updated. | `string` | `"htc-ref-arch-subnet"` | no |

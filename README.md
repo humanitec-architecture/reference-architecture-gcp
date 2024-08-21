@@ -109,6 +109,14 @@ This reference architecture implementation uses Terraform. You will need to do t
    terraform plan
    terraform apply
    ```
+> If you're recreating the reference architecture and facing the issue of `WorkloadIdentityPool already exists`,
+> please run the following commands to import workload identity pools and workload identity pool provider
+> ```shell
+> gcloud iam workload-identity-pools undelete humanitec-wif-pool --location=global
+> gcloud iam workload-identity-pools providers undelete humanitec-wif --workload-identity-pool=humanitec-wif-pool --location=global
+> terraform import module.base.module.credentials.google_iam_workload_identity_pool.pool humanitec-wif-pool
+> terraform import module.base.module.credentials.google_iam_workload_identity_pool_provider.pool_provider humanitec-wif-pool/humanitec-wif
+> ```
 
 #### Required input variables
 
@@ -257,7 +265,7 @@ Once you are finished with the reference architecture, you can remove all provis
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| gar\_repository\_location | Location of the Google Artifact Registry repository, | `string` | n/a | yes |
+| gar\_repository\_region | Region of the Google Artifact Registry repository, | `string` | n/a | yes |
 | project\_id | GCP Project ID to provision resources in. | `string` | n/a | yes |
 | region | GCP Region to provision resources in. | `string` | n/a | yes |
 | gar\_repository\_id | Google Artifact Registry repository ID. | `string` | `"htc-ref-arch"` | no |

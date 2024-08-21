@@ -42,7 +42,7 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | gar\_repository\_id | Google Artifact Registry repository ID. | `string` | n/a | yes |
-| gar\_repository\_location | Location of the Google Artifact Registry repository. | `string` | n/a | yes |
+| gar\_repository\_region | Region of the Google Artifact Registry repository. | `string` | n/a | yes |
 | github\_org\_id | GitHub org id | `string` | n/a | yes |
 | humanitec\_ci\_service\_user\_token | Humanitec CI Service User Token | `string` | n/a | yes |
 | humanitec\_org\_id | Humanitec Organization ID. | `string` | n/a | yes |

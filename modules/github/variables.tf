@@ -8,9 +8,9 @@ variable "gar_repository_id" {
   description = "Google Artifact Registry repository ID."
 }
 
-variable "gar_repository_location" {
+variable "gar_repository_region" {
   type        = string
-  description = "Location of the Google Artifact Registry repository."
+  description = "Region of the Google Artifact Registry repository."
 }
 
 variable "humanitec_org_id" {

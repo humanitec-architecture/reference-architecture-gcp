@@ -7,8 +7,8 @@ module "base" {
   humanitec_prefix = var.humanitec_prefix
   humanitec_org_id = var.humanitec_org_id
 
-  gar_repository_id       = var.gar_repository_id
-  gar_repository_location = var.gar_repository_location
+  gar_repository_id     = var.gar_repository_id
+  gar_repository_region = var.gar_repository_region
 }
 
 # User used for scaffolding and deploying apps
@@ -40,7 +40,7 @@ module "github" {
   project_id                      = var.project_id
   github_org_id                   = var.github_org_id
   gar_repository_id               = var.gar_repository_id
-  gar_repository_location         = var.gar_repository_location
+  gar_repository_region           = var.gar_repository_region
 
   depends_on = [module.base]
 }

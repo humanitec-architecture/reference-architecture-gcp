@@ -40,8 +40,8 @@ module "k8s" {
   vpc_name         = var.vpc_name
   enable_autopilot = var.gke_autopilot
 
-  gar_repository_id       = var.gar_repository_id
-  gar_repository_location = var.gar_repository_location
+  gar_repository_id     = var.gar_repository_id
+  gar_repository_region = var.gar_repository_region
 }
 
 # ######################################################################

@@ -42,7 +42,7 @@ resource "google_service_account" "sa" {
 # Reference https://cloud.google.com/artifact-registry/docs/access-control#roles
 resource "google_artifact_registry_repository_iam_member" "gha_gar_containers_writer" {
   project    = var.project_id
-  location   = var.gar_repository_location
+  location   = var.gar_repository_region
   repository = var.gar_repository_id
   role       = "roles/artifactregistry.writer"
   member     = "serviceAccount:${google_service_account.sa.email}"
