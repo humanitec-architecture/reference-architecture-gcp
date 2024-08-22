@@ -65,8 +65,8 @@ variable "gar_repository_id" {
   default     = null
 }
 
-variable "gar_repository_location" {
-  description = "Location of the Google Artifact Registry repository."
+variable "gar_repository_region" {
+  description = "Region of the Google Artifact Registry repository."
   type        = string
   default     = null
 }

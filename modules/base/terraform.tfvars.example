@@ -2,8 +2,8 @@
 # ID of the Google Artifact Registry repository (not created if empty).
 gar_repository_id = ""
 
-# Location of the Google Artifact Registry repository (required when gar_repository_id is set).
-gar_repository_location = ""
+# Region of the Google Artifact Registry repository (required when gar_repository_id is set).
+gar_repository_region = ""
 
 # Whether GKE Autopilot should be used
 gke_autopilot = true
