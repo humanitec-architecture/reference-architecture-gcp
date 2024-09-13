@@ -72,7 +72,7 @@ By default, the following will be provisioned:
 
 ### Prerequisites
 
-* A Humanitec account with the `Administrator` role in an Organization. Get a [free trial](https://humanitec.com/free-trial?utm_source=github&utm_medium=referral&utm_campaign=gcp_refarch_repo) if you are just starting.
+* A Humanitec account with the `Administrator` role in an Organization. Get a [free trial](https://app.humanitec.io/auth/signup) if you are just starting.
 * A GCP project
 * [gcloud CLI](https://cloud.google.com/cli) installed locally
 * [Terraform](https://www.terraform.io/) installed locally
