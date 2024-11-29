@@ -27,7 +27,7 @@
 |------|-------------|------|---------|:--------:|
 | project\_id | GCP Project ID | `string` | n/a | yes |
 | region | GCP Region | `string` | n/a | yes |
-| subnets | List of VPC Subnets | <pre>list(object({<br>    name                     = string<br>    description              = string<br>    ip_cidr_range            = string<br>    purpose                  = optional(string)<br>    role                     = optional(string)<br>    region                   = optional(string)<br>    private_ip_google_access = optional(bool)<br>    secondary_ip_range = optional(list(object({<br>      range_name    = string<br>      ip_cidr_range = string<br>    })))<br>  }))</pre> | n/a | yes |
+| subnets | List of VPC Subnets | <pre>list(object({<br/>    name                     = string<br/>    description              = string<br/>    ip_cidr_range            = string<br/>    purpose                  = optional(string)<br/>    role                     = optional(string)<br/>    region                   = optional(string)<br/>    private_ip_google_access = optional(bool)<br/>    secondary_ip_range = optional(list(object({<br/>      range_name    = string<br/>      ip_cidr_range = string<br/>    })))<br/>  }))</pre> | n/a | yes |
 | vpc\_description | VPC Description | `string` | n/a | yes |
 | vpc\_name | VPC Name | `string` | n/a | yes |
 
