@@ -16,8 +16,8 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| default\_mysql | github.com/humanitec-architecture/resource-packs-in-cluster | v2024-06-05//humanitec-resource-defs/mysql/basic |
-| default\_postgres | github.com/humanitec-architecture/resource-packs-in-cluster | v2024-06-05//humanitec-resource-defs/postgres/basic |
+| default\_mysql | github.com/humanitec-architecture/resource-packs-in-cluster//humanitec-resource-defs/mysql/basic | v2024-06-05 |
+| default\_postgres | github.com/humanitec-architecture/resource-packs-in-cluster//humanitec-resource-defs/postgres/basic | v2024-06-05 |
 
 ### Resources
 
